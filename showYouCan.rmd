@@ -1,0 +1,29 @@
+---
+title: "Do Boxplot and t.test"
+author: "Dr K"
+date: "March 29, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tigerstats)
+require(tidyverse)
+```
+
+
+## Use the Iris dataset
+
+Find two species that have significantly different petal lengths. Show they are different with boxplots and a t-test.  
+
+```{r }
+mydata <- iris
+View(mydata)
+```
+
+## Including Plots
+
+
+
+
+## Results of ttest.
