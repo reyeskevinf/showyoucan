@@ -21,9 +21,27 @@ mydata <- iris
 View(mydata)
 ```
 
+```{r}
+new<- select(mydata, Petal.Length, Species)
+```
+
+
+
 ## Including Plots
+```{r}
 
+boxplot(new$Petal.Length~Species, data=mydata)
+```
 
+In the box plot test, they are seperated by the species and it shows their respective lengths flowers length. We can clearly see that virginica and setosa are the two flowers that have major differences. virginica is longer than the setosa than about 2.5 in on avg.
 
 
 ## Results of ttest.
+```{r}
+sep=subset(mydata,Species=="setosa")
+vers=subset(mydata,Species=="versicolor")
+t.test(sep$Petal.Length,vers$Petal.Length)
+```
+
+The results of the t-test gave us a p-value of  2.2e-16, therfore we can reject the null hypothesis, because it is a small p-value.
+
